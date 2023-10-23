@@ -9,7 +9,7 @@ namespace CRS
 {
     internal class ClientRegistrationSystem
     {
-        private ClientService clientService = new ClientService();
+        private ClientHandler clientService = new ClientHandler();
         public event EventHandler? ClientListUpdated;
 
         private void OnClientListUpdated()
@@ -47,6 +47,13 @@ namespace CRS
         {
             clientService.SaveToFile(fileName);
             MessageBox.Show("Client details saved to file successfully!");
+        }
+
+        public void LoadFromFile(string fileName)
+        {
+            clientService.LoadFromFile(fileName);
+            OnClientListUpdated();
+            MessageBox.Show("Client details loaded from file successfully!");
         }
 
         public List<Client> GetAllClients()

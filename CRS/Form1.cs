@@ -29,9 +29,6 @@ namespace CRS
         {
             this.ActiveControl = searchInput;
 
-            CRS.AddClient("John Doe", "123 Main St", "555-1234", "john.doe@example.com", "Software");
-            CRS.AddClient("Jane Smith", "456 Oak St", "555-5678", "jane.smith@example.com", "Laptops & PC");
-
             List<Client> clients = CRS.GetAllClients();
             UpdateClientTable(clients);
         }
@@ -130,6 +127,11 @@ namespace CRS
         private void saveButton_Click(object sender, EventArgs e)
         {
             CRS.SaveToFile("clients.txt");
+        }
+
+        private void loadButton_Click(object sender, EventArgs e)
+        {
+            CRS.LoadFromFile("clients.txt");
         }
     }
 }
