@@ -9,7 +9,7 @@ namespace CRS
 {
     internal class ClientRegistrationSystem
     {
-        private ClientHandler clientService = new ClientHandler();
+        private ClientHandler clientHandler = new ClientHandler();
         public event EventHandler? ClientListUpdated;
 
         private void OnClientListUpdated()
@@ -29,7 +29,7 @@ namespace CRS
                 ProductCategory = productCategory
             };
 
-            clientService.AddClient(newClient);
+            clientHandler.AddClient(newClient);
 
             // Notify subscribers that the client list has been updated
             OnClientListUpdated();
@@ -38,32 +38,32 @@ namespace CRS
 
         public void RemoveClient(Guid clientId)
         {
-            clientService.RemoveClient(clientId);
+            clientHandler.RemoveClient(clientId);
             OnClientListUpdated();
             MessageBox.Show("Client removed successfully!");
         }
 
         public void SaveToFile(string fileName)
         {
-            clientService.SaveToFile(fileName);
+            clientHandler.SaveToFile(fileName);
             MessageBox.Show("Client details saved to file successfully!");
         }
 
         public void LoadFromFile(string fileName)
         {
-            clientService.LoadFromFile(fileName);
+            clientHandler.LoadFromFile(fileName);
             OnClientListUpdated();
             MessageBox.Show("Client details loaded from file successfully!");
         }
 
         public List<Client> GetAllClients()
         {
-            return clientService.GetAllClients();
+            return clientHandler.GetAllClients();
         }
 
         public List<Client> SearchClients(string query)
         {
-            return clientService.FindClients(query);
+            return clientHandler.FindClients(query);
         }
     }
 }
