@@ -18,7 +18,7 @@ namespace CRS
             clients.Add(newClient);
         }
 
-        public Client? FindClient(Guid clientId)
+        public Client? FindClients(Guid clientId)
         {
             return clients.Find(c => c.ClientID == clientId);
         }
@@ -38,7 +38,7 @@ namespace CRS
 
         public void RemoveClient(Guid clientId)
         {
-            Client? clientToRemove = clients.Find(c => c.ClientID == clientId);
+            Client? clientToRemove = this.FindClients(clientId);
             if (clientToRemove != null)
             {
                 clients.Remove(clientToRemove);
