@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace CRS
 {
-    internal class Client
+    internal class Client : Record
     {
-        // Assign a random GUID
-        public Guid ClientID { get; private set; } = Guid.NewGuid();
         public string? Name { get; set; }
         public string? Address { get; set; }
         public string? PhoneNumber { get; set; }
