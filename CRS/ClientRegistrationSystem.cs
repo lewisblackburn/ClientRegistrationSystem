@@ -14,7 +14,7 @@ namespace CRS
 
         private void OnClientListUpdated()
         {
-            // Invoke the event when the client list is updated
+            // Invoke the event when the clients table is updated
             ClientListUpdated?.Invoke(this, EventArgs.Empty);
         }
 
@@ -31,7 +31,7 @@ namespace CRS
 
             clientHandler.AddClient(newClient);
 
-            // Notify subscribers that the client list has been updated
+            // Notify subscribers that the clients table has been updated
             OnClientListUpdated();
             MessageBox.Show("Client added successfully!");
         }
