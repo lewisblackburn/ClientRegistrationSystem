@@ -9,6 +9,6 @@ namespace CRS
     internal class Record
     {
         // Assign a random GUID
-        public Guid ClientID { get; private set; } = Guid.NewGuid();
+        public Guid ClientID { get; set; } = Guid.NewGuid();
     }
 }

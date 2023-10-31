@@ -38,7 +38,6 @@
             clientTable = new DataGridView();
             saveButton = new Button();
             clientProductsInput = new TextBox();
-            loadButton = new Button();
             ((System.ComponentModel.ISupportInitialize)clientTable).BeginInit();
             SuspendLayout();
             // 
@@ -46,7 +45,7 @@
             // 
             clientNameInput.AccessibleName = "";
             clientNameInput.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            clientNameInput.Location = new Point(632, 173);
+            clientNameInput.Location = new Point(635, 214);
             clientNameInput.Name = "clientNameInput";
             clientNameInput.PlaceholderText = "Name";
             clientNameInput.Size = new Size(150, 23);
@@ -56,7 +55,7 @@
             // enrollButton
             // 
             enrollButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            enrollButton.Location = new Point(632, 318);
+            enrollButton.Location = new Point(635, 359);
             enrollButton.Name = "enrollButton";
             enrollButton.Size = new Size(150, 35);
             enrollButton.TabIndex = 2;
@@ -67,7 +66,7 @@
             // clientAddressInput
             // 
             clientAddressInput.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            clientAddressInput.Location = new Point(632, 202);
+            clientAddressInput.Location = new Point(635, 243);
             clientAddressInput.Name = "clientAddressInput";
             clientAddressInput.PlaceholderText = "Address";
             clientAddressInput.Size = new Size(150, 23);
@@ -76,7 +75,7 @@
             // clientPhoneNumberInput
             // 
             clientPhoneNumberInput.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            clientPhoneNumberInput.Location = new Point(632, 231);
+            clientPhoneNumberInput.Location = new Point(635, 272);
             clientPhoneNumberInput.Name = "clientPhoneNumberInput";
             clientPhoneNumberInput.PlaceholderText = "Phone number";
             clientPhoneNumberInput.Size = new Size(150, 23);
@@ -86,7 +85,7 @@
             // clientEmailInput
             // 
             clientEmailInput.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            clientEmailInput.Location = new Point(632, 260);
+            clientEmailInput.Location = new Point(635, 301);
             clientEmailInput.Name = "clientEmailInput";
             clientEmailInput.PlaceholderText = "Email";
             clientEmailInput.Size = new Size(150, 23);
@@ -126,7 +125,7 @@
             // saveButton
             // 
             saveButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            saveButton.Location = new Point(632, 359);
+            saveButton.Location = new Point(635, 400);
             saveButton.Name = "saveButton";
             saveButton.Size = new Size(150, 35);
             saveButton.TabIndex = 9;
@@ -137,28 +136,16 @@
             // clientProductsInput
             // 
             clientProductsInput.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            clientProductsInput.Location = new Point(632, 289);
+            clientProductsInput.Location = new Point(635, 330);
             clientProductsInput.Name = "clientProductsInput";
             clientProductsInput.PlaceholderText = "Product Categories";
             clientProductsInput.Size = new Size(150, 23);
             clientProductsInput.TabIndex = 10;
             // 
-            // loadButton
-            // 
-            loadButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            loadButton.Location = new Point(635, 400);
-            loadButton.Name = "loadButton";
-            loadButton.Size = new Size(150, 35);
-            loadButton.TabIndex = 11;
-            loadButton.Text = "Load from File";
-            loadButton.UseVisualStyleBackColor = true;
-            loadButton.Click += loadButton_Click;
-            // 
             // Form1
             // 
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(800, 450);
-            Controls.Add(loadButton);
             Controls.Add(clientProductsInput);
             Controls.Add(saveButton);
             Controls.Add(clientTable);
@@ -190,6 +177,5 @@
         private DataGridView clientTable;
         private Button saveButton;
         private TextBox clientProductsInput;
-        private Button loadButton;
     }
 }

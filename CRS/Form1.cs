@@ -128,10 +128,5 @@ namespace CRS
         {
             CRS.SaveToFile("clients.txt");
         }
-
-        private void loadButton_Click(object sender, EventArgs e)
-        {
-            CRS.LoadFromFile("clients.txt");
-        }
     }
 }
