@@ -38,6 +38,8 @@ namespace CRS
 
         public void RemoveClient(Guid clientId)
         {
+            Client client = clientHandler.FindClients(clientId);
+            Console.WriteLine("ID: {client.ClientID}, Name: {client.Name}, Address: {client.Address}.");
             clientHandler.RemoveClient(clientId);
             OnClientListUpdated();
             MessageBox.Show("Client removed successfully!");
